@@ -14,6 +14,7 @@ function activate(ctx) {
       if (isCompleteDocument) return null
 
       const filesBaseDir = 'lib'
+      const storybookPort = 6007
       const highlightedWord = documentText.split('\r')[0]
       const files = await vscode.workspace.findFiles(
         `${filesBaseDir}/**/${highlightedWord}/index.js`,
@@ -22,15 +23,33 @@ function activate(ctx) {
       )
       if (!files.length) return null
 
+      const cutStringFrom = (word, string) => {
+        const indexOfWord = string.indexOf(word)
+        const slice = string.slice(indexOfWord, string.length)
+        return slice
+      }
+
+      const getStoryPath = (word, string, storybookPort) => {
+        const stringRest = cutStringFrom(word, string)
+        let stringSplit = stringRest.split('/')
+        stringSplit.pop()
+        const componentPath = stringSplit.join('-')
+        const storyPath = `http://localhost:${storybookPort}/?path=/story/${componentPath}`
+        return storyPath
+      }
+
       const highlightedWordFile = files[0]
+      const storyPath = getStoryPath(
+        filesBaseDir,
+        highlightedWordFile.path,
+        storybookPort
+      )
       const content = new vscode.MarkdownString('', true)
       content.appendMarkdown(`__${highlightedWord}__`)
       content.appendMarkdown('\n \n')
       content.appendMarkdown(`[Open File](${highlightedWordFile.path})`)
       content.appendMarkdown('\n \n')
-      content.appendMarkdown(
-        `[Open Storybook Story](http://localhost:6007/?path=/story/lib-components-${highlightedWord})`
-      )
+      content.appendMarkdown(`[Open Storybook Story](${storyPath})`)
 
       return {
         contents: [content]
