@@ -1,19 +1,15 @@
 const vscode = require('vscode')
+const getHighlightedWord = require('../../utils/getHighlightedWord')
 
 module.exports = function handleHover() {
   vscode.languages.registerHoverProvider('javascript', {
     async provideHover() {
-      const editor = vscode.window.activeTextEditor
-      let cursorPosition = editor.selection.start
-      let wordRange = editor.document.getWordRangeAtPosition(cursorPosition)
-      let documentText = editor.document.getText(wordRange)
-      const isCompleteDocument = documentText.split('\r').length > 1
-      if (isCompleteDocument) return null
+      const highlightedWord = getHighlightedWord()
+      if (!highlightedWord) return null
 
       const config = vscode.workspace.getConfiguration('wordIntellisense')
       const filesBaseDir = config.baseDir
       const storybookPort = config.storybook.port
-      const highlightedWord = documentText.split('\r')[0]
       const files = await vscode.workspace.findFiles(
         `${filesBaseDir}/**/${highlightedWord}/index.js`,
         '/node_modules/',
