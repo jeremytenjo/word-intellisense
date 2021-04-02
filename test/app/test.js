@@ -1,3 +1,5 @@
 NavBar
 
 Button
+
+capitalize

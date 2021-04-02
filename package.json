@@ -18,6 +18,23 @@
 		"pretest": "npm run lint",
 		"test": "node ./test/runTest.js"
 	},
+	"contributes": {
+		"configuration": {
+			"title": "WordIntellisense",
+			"properties": {
+				"wordIntellisense.baseDir": {
+					"type": "string",
+					"default": "lib",
+					"description": "Base directory of auto imported files"
+				},
+				"wordIntellisense.storybook.port": {
+					"type": "number",
+					"default": 6007,
+					"description": "Storybook port number"
+				}
+			}
+		}
+	},
 	"devDependencies": {
 		"@types/vscode": "^1.55.0",
 		"@types/glob": "^7.1.3",

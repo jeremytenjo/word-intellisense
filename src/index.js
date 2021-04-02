@@ -13,8 +13,9 @@ function activate(ctx) {
       const isCompleteDocument = documentText.split('\r').length > 1
       if (isCompleteDocument) return null
 
-      const filesBaseDir = 'lib'
-      const storybookPort = 6007
+      const config = vscode.workspace.getConfiguration('wordIntellisense')
+      const filesBaseDir = config.baseDir
+      const storybookPort = config.storybook.port
       const highlightedWord = documentText.split('\r')[0]
       const files = await vscode.workspace.findFiles(
         `${filesBaseDir}/**/${highlightedWord}/index.js`,
