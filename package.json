@@ -1,6 +1,6 @@
 {
-	"name": "smart-auto-import",
-	"displayName": "smart-auto-import",
+	"name": "word-intellisense",
+	"displayName": "word-intellisense",
 	"description": "Add intellisnse to auto-import",
 	"version": "0.0.1",
 	"engines": {
