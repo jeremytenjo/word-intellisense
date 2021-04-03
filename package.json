@@ -1,7 +1,8 @@
 {
 	"name": "word-intellisense",
-	"displayName": "word-intellisense",
-	"description": "Add intellisnse to auto-import",
+	"displayName": "Word Intellisense",
+	"description": "Add intellisnse to Words",
+	"publisher": "JeremyTenjo",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.55.0"
@@ -16,8 +17,11 @@
 	"scripts": {
 		"lint": "eslint .",
 		"pretest": "npm run lint",
-		"test": "node ./test/runTest.js"
+		"test": "",
+		"publish": "vsce publish minor",
+		"vscode:prepublish": "npm run test"
 	},
+	"icon": "assets/images/logo.png",
 	"contributes": {
 		"configuration": {
 			"title": "WordIntellisense",
