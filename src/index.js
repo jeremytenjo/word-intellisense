@@ -4,7 +4,7 @@ const handleOnDefinition = require('./handleOnDefinition')
 /**
  * @param {vscode.ExtensionContext} context
  */
-function activate(ctx) {
+function activate() {
   handleHover()
   handleOnDefinition()
 }
