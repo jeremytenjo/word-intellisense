@@ -13,6 +13,10 @@
 		},
 		"sourceType": "module"
 	},
+	"ignorePatterns": [
+		"lib",
+		"app"
+	],
 	"rules": {
 		"no-const-assign": "warn",
 		"no-this-before-super": "warn",
