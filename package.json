@@ -22,6 +22,10 @@
 		"vscode:prepublish": "npm run test"
 	},
 	"icon": "assets/images/logo.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jeremytenjo/word-intellisense"
+	},
 	"contributes": {
 		"configuration": {
 			"title": "WordIntellisense",
