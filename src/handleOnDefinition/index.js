@@ -1,19 +1,24 @@
 const vscode = require('vscode')
+const getHighlightedWord = require('../../utils/getHighlightedWord')
+const getFileData = require('../../utils/getFileData')
 
 module.exports = function handleOnDefinition() {
   vscode.languages.registerDefinitionProvider('javascript', {
     async provideDefinition() {
-      console.log('HERE!')
+      try {
+        const highlightedWord = getHighlightedWord()
+        if (!highlightedWord) return null
 
-      let uri = new vscode.Uri.file(
-        '/Users/jtenjo/Documents/word-intellisense/test/app/lib/utils/strings/capitalize/index.js'
-      )
-      console.log({ uri })
-      const location = new vscode.Location(uri, new vscode.Position(0, 0))
+        const highlightedWordFile = await getFileData(highlightedWord)
+        if (!highlightedWordFile) return null
 
-      console.log({ location })
+        let uri = vscode.Uri.file(highlightedWordFile.path)
+        const location = new vscode.Location(uri, new vscode.Position(0, 0))
 
-      return location
+        return location
+      } catch (error) {
+        console.error(error)
+      }
     }
   })
 }
