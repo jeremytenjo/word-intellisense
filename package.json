@@ -2,7 +2,7 @@
 	"name": "word-intellisense",
 	"displayName": "Word Intellisense",
 	"description": "Add intellisnse to Words",
-	"publisher": "JeremyTenjo",
+	"publisher": "tenjojeremy",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.55.0"
