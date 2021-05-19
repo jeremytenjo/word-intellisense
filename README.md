@@ -2,11 +2,17 @@
 
 ## Features
 
+Improves dev expirience when using the Babel auto import plugin.
+
 Auto complete
 
 Open file and Open Storybook on hover
 
 Go to definition if file exists
+
+## Examaple
+
+![image info](https://firebasestorage.googleapis.com/v0/b/useweb-lib.appspot.com/o/devtools%2Fplugins%2Fvscode%2Fword-intellisense%2Fdemo.gif?alt=media&token=828e7c5a-372b-4a69-8fb4-5d8930494c87)
 
 ## Extension Settings
 
@@ -18,25 +24,3 @@ This extension contributes the following settings:
 
 - `wordIntellisense.baseDir`: base dir of words
 - `wordIntellisense.storybook.port`: Storybook port
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
