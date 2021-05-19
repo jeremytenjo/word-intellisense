@@ -8,6 +8,5 @@ const forwardSlash = require('./forwardSlash')
  * returns ['project', 'heoo']
  */
 module.exports = function splitPath(path) {
-  console.log({ forwardSlash })
-  return path.split(forwardSlash)
+  return path.toString().split(forwardSlash)
 }
