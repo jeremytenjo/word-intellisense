@@ -2,7 +2,7 @@
 
 Improves dev experience when using the [Babel Auto Import](https://github.com/PavelDymkov/babel-plugin-auto-import) plugin.
 
-![image info](https://firebasestorage.googleapis.com/v0/b/useweb-lib.appspot.com/o/devtools%2Fplugins%2Fvscode%2Fword-intellisense%2Fdemo.gif?alt=media&token=828e7c5a-372b-4a69-8fb4-5d8930494c87)
+![image info](https://github.com/jeremytenjo/word-intellisense/blob/main/assets/videos/demo.gif?raw=true)
 
 ## Features
 
