@@ -1,18 +1,14 @@
 # Word Intellisense
 
-## Features
-
-Improves dev expirience when using the Babel auto import plugin.
-
-Auto complete
-
-Open file and Open Storybook on hover
-
-Go to definition if file exists
-
-## Examaple
+Improves dev experience when using the Babel auto import plugin.
 
 ![image info](https://firebasestorage.googleapis.com/v0/b/useweb-lib.appspot.com/o/devtools%2Fplugins%2Fvscode%2Fword-intellisense%2Fdemo.gif?alt=media&token=828e7c5a-372b-4a69-8fb4-5d8930494c87)
+
+## Features
+
+-Auto complete
+-Open file and Open Storybook on hover
+-Go to definition if file exists
 
 ## Extension Settings
 
