@@ -2,7 +2,7 @@
 	"name": "word-intellisense",
 	"displayName": "Word Intellisense",
 	"description": "Add intellisense to auto imported files when using the Babel Auto Import plugin",
-	"publisher": "JeremyTenjo",
+	"publisher": "tenjojeremy",
 	"version": "0.8.0",
 	"engines": {
 		"vscode": "^1.55.0"
