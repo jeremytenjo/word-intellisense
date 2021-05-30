@@ -35,6 +35,11 @@
 					"default": "lib",
 					"description": "Base directory of auto imported files"
 				},
+				"wordIntellisense.excludeFolders": {
+					"type": "string",
+					"default": "node_modules",
+					"description": "Exclude folders"
+				},
 				"wordIntellisense.storybook.port": {
 					"type": "number",
 					"default": 6007,
