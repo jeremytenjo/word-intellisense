@@ -30,6 +30,11 @@
 		"configuration": {
 			"title": "Word Intellisense",
 			"properties": {
+				"wordIntellisense.enable": {
+					"type": "boolean",
+					"default": false,
+					"description": "Enable Plugin"
+				},
 				"wordIntellisense.baseDir": {
 					"type": "string",
 					"default": "lib",

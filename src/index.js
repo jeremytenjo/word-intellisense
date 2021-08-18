@@ -1,3 +1,4 @@
+const vscode = require('vscode')
 const pkgJson = require('../package.json')
 
 const handleHover = require('./handleHover')
@@ -9,9 +10,13 @@ const handleAutoComplete = require('./handleAutoComplete')
  */
 function activate() {
   console.log(`${pkgJson.name} activated!`)
-  handleHover()
-  handleOnDefinition()
-  handleAutoComplete()
+  const config = vscode.workspace.getConfiguration('wordIntellisense')
+
+  if (config.enable) {
+    handleHover()
+    handleOnDefinition()
+    handleAutoComplete()
+  }
 }
 
 // this method is called when your extension is deactivated
